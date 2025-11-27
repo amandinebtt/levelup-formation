@@ -22,8 +22,14 @@
             padding: 20px;
             text-align: center;
         }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { margin: 5px 0 15px; font-size: 1.2em; }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0 15px;
+            font-size: 1.2em;
+        }
         nav a {
             color: var(--blanc);
             margin: 0 15px;
@@ -35,7 +41,11 @@
             max-width: 1000px;
             margin: auto;
         }
-        h2 { text-align: center; font-size: 2em; margin-bottom: 30px; }
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
         .services, .tarifs, .contact {
             display: flex;
             flex-wrap: wrap;
@@ -49,12 +59,9 @@
             padding: 20px;
             width: 300px;
             box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
         }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
+        .card h3 {
+            margin-top: 0;
         }
         .btn {
             display: inline-block;
@@ -67,20 +74,6 @@
             text-decoration: none;
             font-weight: 600;
             margin-top: 15px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid var(--kaki);
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: var(--kaki);
-            color: var(--blanc);
         }
         footer {
             background-color: var(--kaki);
@@ -96,17 +89,38 @@
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
-        label { font-weight: 600; }
-        iframe { width: 100%; border: 0; border-radius: 10px; height: 300px; }
+        label {
+            font-weight: 600;
+        }
+        iframe {
+            width: 100%;
+            border: 0;
+            border-radius: 10px;
+            height: 300px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid var(--kaki);
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: var(--kaki);
+            color: var(--blanc);
+        }
     </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-    <img src="logo.png" alt="Logo LEVEL'UP" style="height:80px; margin-bottom:10px;">
+    <img src="logo.png" alt="Logo LEVEL'UP" width="150">
     <h1>LEVEL'UP</h1>
-    <p>Un espace de formation pour grandir à chaque étape de la vie 📚✨</p>
+    <p>Un espace de formation pour grandir à chaque étape de la vie ✨</p>
     <nav>
         <a href="#services">Services</a>
         <a href="#tarifs">Tarifs</a>
@@ -126,28 +140,28 @@
     <h2>Nos formations 💡</h2>
     <div class="services">
         <div class="card">
-            <img src="informatique.jpg" alt="Informatique">
-            <h3>Informatique & Bureautique 💻</h3>
+            <h3>Informatique & Bureautique 🖥️</h3>
+            <img src="ordi.png" alt="Cours informatique" width="100%">
             <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
         </div>
         <div class="card">
-            <img src="langues.jpg" alt="Langues">
-            <h3>Langues vivantes 🌍</h3>
+            <h3>Langues vivantes 🌎</h3>
+            <img src="langues.png" alt="Cours langues" width="100%">
             <p>Français et Anglais, cours adaptés à tous les niveaux, pour progresser rapidement.</p>
         </div>
         <div class="card">
-            <img src="soutien.jpg" alt="Soutien scolaire">
-            <h3>Soutien scolaire 📝</h3>
+            <h3>Soutien scolaire 📚</h3>
+            <img src="enfants.png" alt="Enfants aidés" width="100%">
             <p>Maths, Français, Histoire-Géo, aide aux devoirs avec suivi personnalisé pour chaque élève.</p>
         </div>
         <div class="card">
-            <img src="compta.jpg" alt="Comptabilité">
-            <h3>Initiation Comptabilité & Gestion 📊</h3>
+            <h3>Initiation Comptabilité & Gestion 💼</h3>
+            <img src="compta.png" alt="Comptabilité" width="100%">
             <p>Notions simples de gestion budgétaire et comptable pour la vie courante.</p>
         </div>
         <div class="card">
-            <img src="admin.jpg" alt="Accompagnement administratif">
-            <h3>Accompagnement administratif 🖋️</h3>
+            <h3>Accompagnement administratif 📝</h3>
+            <img src="grandparents.png" alt="Aide administrative" width="100%">
             <p>Aide à la rédaction de CV, lettres de motivation et démarches administratives en ligne.</p>
         </div>
     </div>
@@ -155,13 +169,13 @@
 
 <!-- TARIFS -->
 <section id="tarifs">
-    <h2>Tarifs & Réservations 💰</h2>
+    <h2>Tarifs & Réservations 💳</h2>
     <table>
         <tr>
             <th>Type</th>
-            <th>Durée</th>
-            <th>Prix</th>
-            <th>Participants</th>
+            <th>Durée / Horaires</th>
+            <th>Tarif</th>
+            <th>Capacité</th>
         </tr>
         <tr>
             <td>Frais d'inscription</td>
@@ -171,42 +185,42 @@
         </tr>
         <tr>
             <td>Cours traditionnels</td>
-            <td>38 semaines</td>
+            <td>38 semaines, 5 pers/session, 9h-10h30 / 10h30-12h / 16h30-18h / 18h-19h30</td>
             <td>19€/personne</td>
-            <td>5 par session</td>
+            <td>200 personnes max</td>
         </tr>
         <tr>
             <td>Stages intensifs</td>
-            <td>10h/semaine</td>
+            <td>10h/semaine, 5 pers/session, 10h-12h / 14h-16h</td>
             <td>99€/personne</td>
-            <td>5 par session</td>
+            <td>20 personnes max / semaine</td>
         </tr>
     </table>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contactez-nous 📞</h2>
+    <h2>Contactez-nous 📬</h2>
     <div class="contact">
         <div class="card">
-            <h3>Adresse 🏢</h3>
+            <h3>Adresse</h3>
             <p>22 rue de la Défense Passive, 14000 Caen</p>
-            <!-- Carte Google Maps -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="card">
-            <h3>Contact 📧</h3>
+            <h3>Contact</h3>
             <p>Email : contact@levelup-formation.fr</p>
             <p>Téléphone : 06 44 38 88 47</p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/level-up-formation/" target="_blank" style="color: var(--blanc);">LEVEL'UP Formation</a></p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/level-up-formation/" target="_blank">LEVEL'UP Formation</a></p>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2025 LEVEL'UP. Tous droits réservés.</p>
+    <p>Suivez-nous sur <a href="https://www.linkedin.com/in/level-up-formation/" style="color:white;" target="_blank">LinkedIn</a></p>
 </footer>
 
 </body>
 </html>
-
