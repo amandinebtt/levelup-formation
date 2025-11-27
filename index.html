@@ -12,7 +12,7 @@
         }
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif';
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--blanc);
             color: var(--kaki);
         }
@@ -53,6 +53,8 @@
         }
         .card img {
             width: 100%;
+            height: 200px; /* Toutes les images à la même taille */
+            object-fit: cover;
             border-radius: 10px;
             margin-bottom: 10px;
         }
@@ -102,6 +104,7 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
     <img src="logo.png" alt="Logo LEVEL'UP" style="height:80px; margin-bottom:10px;">
     <h1>LEVEL'UP</h1>
@@ -113,64 +116,92 @@
     </nav>
 </header>
 
+<!-- ACCUEIL -->
 <section id="accueil">
     <h2>Bienvenue chez LEVEL'UP 🎓</h2>
-    <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif.</p>
+    <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif. Des cours personnalisés, adaptés à vos horaires et à vos besoins, pour tous les âges et tous les niveaux.</p>
     <a href="#tarifs" class="btn">Réservez votre session</a>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
     <h2>Nos formations 💡</h2>
     <div class="services">
         <div class="card">
-            <img src="informatique.jpg" alt="Informatique">
+            <img src="grands-parents.png" alt="Informatique & Bureautique">
             <h3>Informatique & Bureautique 💻</h3>
-            <p>Initiation et perfectionnement Word, Excel, PowerPoint.</p>
+            <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
         </div>
         <div class="card">
-            <img src="langues.jpg" alt="Langues">
+            <img src="langues.png" alt="Langues">
             <h3>Langues vivantes 🌍</h3>
-            <p>Français et Anglais pour tous les niveaux.</p>
+            <p>Français et Anglais, cours adaptés à tous les niveaux, pour progresser rapidement.</p>
         </div>
         <div class="card">
-            <img src="soutien.jpg" alt="Soutien scolaire">
+            <img src="enfants.png" alt="Soutien scolaire">
             <h3>Soutien scolaire 📝</h3>
-            <p>Aide personnalisée pour chaque élève.</p>
+            <p>Maths, Français, Histoire-Géo, aide aux devoirs avec suivi personnalisé pour chaque élève.</p>
         </div>
         <div class="card">
-            <img src="compta.jpg" alt="Comptabilité">
-            <h3>Initiation Comptabilité 📊</h3>
-            <p>Notions simples de gestion budgétaire.</p>
+            <img src="compta.png" alt="Comptabilité">
+            <h3>Initiation Comptabilité & Gestion 📊</h3>
+            <p>Notions simples de gestion budgétaire et comptable pour la vie courante.</p>
         </div>
         <div class="card">
-            <img src="admin.jpg" alt="Accompagnement administratif">
+            <img src="admin.png" alt="Accompagnement administratif">
             <h3>Accompagnement administratif 🖋️</h3>
-            <p>Aide pour CV, lettres et démarches en ligne.</p>
+            <p>Aide à la rédaction de CV, lettres de motivation et démarches administratives en ligne.</p>
         </div>
     </div>
 </section>
 
+<!-- TARIFS -->
 <section id="tarifs">
     <h2>Tarifs & Réservations 💰</h2>
     <table>
-        <tr><th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th></tr>
-        <tr><td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td></tr>
-        <tr><td>Cours traditionnels</td><td>38 semaines</td><td>19€/personne</td><td>5 par session</td></tr>
-        <tr><td>Stages intensifs</td><td>10h/semaine</td><td>99€/personne</td><td>5 par session</td></tr>
+        <tr>
+            <th>Type</th>
+            <th>Durée</th>
+            <th>Prix</th>
+            <th>Participants</th>
+        </tr>
+        <tr>
+            <td>Frais d'inscription</td>
+            <td>-</td>
+            <td>15€</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Cours traditionnels</td>
+            <td>38 semaines</td>
+            <td>19€/personne</td>
+            <td>5 par session</td>
+        </tr>
+        <tr>
+            <td>Stages intensifs</td>
+            <td>10h/semaine</td>
+            <td>99€/personne</td>
+            <td>5 par session</td>
+        </tr>
     </table>
+    <a href="#contact" class="btn">Réservez maintenant</a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contactez-nous 📞</h2>
     <div class="contact">
         <div class="card">
             <h3>Adresse 🏢</h3>
             <p>22 rue de la Défense Passive, 14000 Caen</p>
+            <!-- Carte Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="card">
             <h3>Contact 📧</h3>
             <p>Email : contact@levelup-formation.fr</p>
             <p>Téléphone : 06 44 38 88 47</p>
+            <p>LinkedIn : <a href="https://www.linkedin.com/in/level-up-formation/" target="_blank">LEVEL'UP Formation</a></p>
         </div>
     </div>
 </section>
