@@ -3,223 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEVEL'UP - Formation & Accompagnement</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --kaki: #566020;
-            --blanc: #f8f8f0;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--blanc);
-            color: var(--kaki);
-        }
-        header {
-            background-color: var(--kaki);
-            color: var(--blanc);
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin: 5px 0 15px;
-            font-size: 1.2em;
-        }
-        nav a {
-            color: var(--blanc);
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 30px;
-        }
-        .services, .tarifs, .contact {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
-        .card {
-            background-color: var(--blanc);
-            border: 2px solid var(--kaki);
-            border-radius: 15px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--kaki);
-            color: var(--blanc);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-        footer {
-            background-color: var(--kaki);
-            color: var(--blanc);
-            text-align: center;
-            padding: 20px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        label {
-            font-weight: 600;
-        }
-        iframe {
-            width: 100%;
-            border: 0;
-            border-radius: 10px;
-            height: 300px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid var(--kaki);
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: var(--kaki);
-            color: var(--blanc);
-        }
-    </style>
+    <title>LEVEL'UP Formation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="Logo LEVEL'UP" width="150">
-    <h1>LEVEL'UP</h1>
-    <p>Un espace de formation pour grandir à chaque étape de la vie ✨</p>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <img src="logo.png" alt="Logo LEVEL'UP" class="logo">
+    <h1>LEVEL'UP Formation</h1>
+    <p class="slogan">✨ Un espace de formation pour grandir à chaque étape de la vie ✨</p>
 </header>
 
-<!-- ACCUEIL -->
-<section id="accueil">
-    <h2>Bienvenue chez LEVEL'UP 🎓</h2>
-    <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif. Des cours personnalisés, adaptés à vos horaires et à vos besoins, pour tous les âges et tous les niveaux.</p>
-    <a href="#tarifs" class="btn">Réservez votre session</a>
+<nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil" class="section">
+    <h2>Bienvenue chez LEVEL'UP 📘</h2>
+    <p>
+        Notre mission est simple : accompagner enfants, adolescents, adultes et seniors
+        dans leur apprentissage 📚.  
+        Bureautique, langues, comptabilité, aide aux devoirs…  
+        Ici, tout le monde peut progresser à son rythme 💪.
+    </p>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-    <h2>Nos formations 💡</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Informatique & Bureautique 🖥️</h3>
-            <img src="ordi.png" alt="Cours informatique" width="100%">
-            <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
-        </div>
-        <div class="card">
-            <h3>Langues vivantes 🌎</h3>
-            <img src="langues.png" alt="Cours langues" width="100%">
-            <p>Français et Anglais, cours adaptés à tous les niveaux, pour progresser rapidement.</p>
-        </div>
-        <div class="card">
-            <h3>Soutien scolaire 📚</h3>
-            <img src="enfants.png" alt="Enfants aidés" width="100%">
-            <p>Maths, Français, Histoire-Géo, aide aux devoirs avec suivi personnalisé pour chaque élève.</p>
-        </div>
-        <div class="card">
-            <h3>Initiation Comptabilité & Gestion 💼</h3>
-            <img src="compta.png" alt="Comptabilité" width="100%">
-            <p>Notions simples de gestion budgétaire et comptable pour la vie courante.</p>
-        </div>
-        <div class="card">
-            <h3>Accompagnement administratif 📝</h3>
-            <img src="grandparents.png" alt="Aide administrative" width="100%">
-            <p>Aide à la rédaction de CV, lettres de motivation et démarches administratives en ligne.</p>
-        </div>
+<section id="services" class="section">
+    <h2>Nos Services 🎓</h2>
+
+    <div class="card">
+        <img src="enfants.png" alt="Soutien scolaire">
+        <h3>Soutien scolaire</h3>
+        <p>Accompagnement adapté aux enfants et adolescents.</p>
+    </div>
+
+    <div class="card">
+        <img src="grandparents.png" alt="Accompagnement administratif">
+        <h3>Accompagnement administratif</h3>
+        <p>Aide personnalisée pour comprendre et gérer vos démarches.</p>
+    </div>
+
+    <div class="card">
+        <img src="compta.png" alt="Comptabilité">
+        <h3>Initiation Comptabilité & Gestion</h3>
+        <p>Découvrir les bases essentielles simplement.</p>
+    </div>
+
+    <div class="card">
+        <img src="langues.png" alt="Langues vivantes">
+        <h3>Langues vivantes</h3>
+        <p>Cours d’anglais et d’autres langues modernes.</p>
+    </div>
+
+    <div class="card">
+        <img src="ordi.png" alt="Informatique & Bureautique">
+        <h3>Informatique & Bureautique</h3>
+        <p>Maîtriser Word, Excel, Internet et les outils numériques.</p>
     </div>
 </section>
 
-<!-- TARIFS -->
-<section id="tarifs">
-    <h2>Tarifs & Réservations 💳</h2>
+<section id="tarifs" class="section">
+    <h2>Nos Tarifs 💶</h2>
+
+    <h3>📚 Cours traditionnels</h3>
     <table>
-        <tr>
-            <th>Type</th>
-            <th>Durée / Horaires</th>
-            <th>Tarif</th>
-            <th>Capacité</th>
-        </tr>
-        <tr>
-            <td>Frais d'inscription</td>
-            <td>-</td>
-            <td>15€</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Cours traditionnels</td>
-            <td>38 semaines, 5 pers/session, 9h-10h30 / 10h30-12h / 16h30-18h / 18h-19h30</td>
-            <td>19€/personne</td>
-            <td>200 personnes max</td>
-        </tr>
-        <tr>
-            <td>Stages intensifs</td>
-            <td>10h/semaine, 5 pers/session, 10h-12h / 14h-16h</td>
-            <td>99€/personne</td>
-            <td>20 personnes max / semaine</td>
-        </tr>
+        <tr><th>Formule</th><th>Durée</th><th>Tarif</th><th>Capacité</th></tr>
+        <tr><td>Cours traditionnels</td><td>38 semaines</td><td>19€ / séance</td><td>5 pers / séance</td></tr>
     </table>
+
+    <h3>⏳ Stages intensifs (1 semaine)</h3>
+    <table>
+        <tr><th>Formule</th><th>Durée</th><th>Tarif</th><th>Capacité</th></tr>
+        <tr><td>Stage 1 semaine</td><td>10h</td><td>99€</td><td>5 pers / séance</td></tr>
+    </table>
+
+    <p class="inscription">📝 Frais d'inscription : <strong>15€</strong></p>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contactez-nous 📬</h2>
-    <div class="contact">
-        <div class="card">
-            <h3>Adresse</h3>
-            <p>22 rue de la Défense Passive, 14000 Caen</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="card">
-            <h3>Contact</h3>
-            <p>Email : contact@levelup-formation.fr</p>
-            <p>Téléphone : 06 44 38 88 47</p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/level-up-formation/" target="_blank">LEVEL'UP Formation</a></p>
-        </div>
+<section id="contact" class="section">
+    <h2>Contact 📍</h2>
+
+    <p><strong>Adresse :</strong> 22 Rue de la Défense Passive, 14000 Caen</p>
+    <p><strong>Téléphone :</strong> 06 44 38 88 47</p>
+    <p><strong>Email :</strong> contact@levelup-formation.fr</p>
+
+    <div class="map-container">
+        <!-- Carte Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr"
+            loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+
+    <p>
+        🔗 Retrouvez-nous sur  
+        <a href="https://www.linkedin.com/in/level-up-formation/" target="_blank">LinkedIn</a>
+    </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2025 LEVEL'UP. Tous droits réservés.</p>
-    <p>Suivez-nous sur <a href="https://www.linkedin.com/in/level-up-formation/" style="color:white;" target="_blank">LinkedIn</a></p>
+    <p>© 2025 LEVEL'UP Formation - Tous droits réservés</p>
 </footer>
 
 </body>
