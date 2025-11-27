@@ -53,7 +53,7 @@
         }
         .card img {
             width: 100%;
-            height: 200px; /* Toutes les images à la même taille */
+            height: 200px;
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 10px;
@@ -112,6 +112,7 @@
     <nav>
         <a href="#services">Services</a>
         <a href="#tarifs">Tarifs</a>
+        <a href="#reservation">Réservation</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -120,7 +121,7 @@
 <section id="accueil">
     <h2>Bienvenue chez LEVEL'UP 🎓</h2>
     <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif. Des cours personnalisés, adaptés à vos horaires et à vos besoins, pour tous les âges et tous les niveaux.</p>
-    <a href="#tarifs" class="btn">Réservez votre session</a>
+    <a href="#reservation" class="btn">Réservez votre session</a>
 </section>
 
 <!-- SERVICES -->
@@ -128,7 +129,7 @@
     <h2>Nos formations 💡</h2>
     <div class="services">
         <div class="card">
-            <img src="grands-parents.png" alt="Informatique & Bureautique">
+            <img src="grandsparents.png" alt="Informatique & Bureautique">
             <h3>Informatique & Bureautique 💻</h3>
             <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
         </div>
@@ -184,7 +185,36 @@
             <td>5 par session</td>
         </tr>
     </table>
-    <a href="#contact" class="btn">Réservez maintenant</a>
+</section>
+
+<!-- RÉSERVATION EN LIGNE -->
+<section id="reservation">
+    <h2>Réservez votre session en ligne 🖊️</h2>
+    <form action="mailto:contact@levelup-formation.fr" method="post" enctype="text/plain">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="Nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="Email" required>
+
+        <label for="service">Service :</label>
+        <select id="service" name="Service" required>
+            <option value="">-- Sélectionnez --</option>
+            <option value="Informatique">Informatique & Bureautique 💻</option>
+            <option value="Langues">Langues vivantes 🌍</option>
+            <option value="Soutien">Soutien scolaire 📝</option>
+            <option value="Compta">Comptabilité & Gestion 📊</option>
+            <option value="Admin">Accompagnement administratif 🖋️</option>
+        </select>
+
+        <label for="date">Date souhaitée :</label>
+        <input type="date" id="date" name="Date" required>
+
+        <label for="commentaires">Commentaires :</label>
+        <textarea id="commentaires" name="Commentaires" rows="3" placeholder="Ex : Horaires préférés..."></textarea>
+
+        <button type="submit" class="btn">Envoyer ma réservation</button>
+    </form>
 </section>
 
 <!-- CONTACT -->
