@@ -9,6 +9,7 @@
         :root {
             --kaki: #566020;
             --blanc: #f8f8f0;
+            --gris: #f2f2f2;
         }
         body {
             margin: 0;
@@ -22,6 +23,12 @@
             padding: 20px;
             text-align: center;
         }
+        header img {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header p { margin: 5px 0 15px; font-size: 1.2em; }
         nav a {
             color: var(--blanc);
             margin: 0 15px;
@@ -33,13 +40,8 @@
             max-width: 1000px;
             margin: auto;
         }
-        h2 { text-align: center; margin-bottom: 30px; }
-        .services, .tarifs, .contact {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-        }
+        h2 { text-align: center; font-size: 2em; margin-bottom: 30px; }
+        .services, .contact-cards, .newsletter { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
         .card {
             background-color: var(--blanc);
             border: 2px solid var(--kaki);
@@ -56,6 +58,18 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--kaki);
+            color: var(--blanc);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -63,79 +77,116 @@
         }
         th, td {
             border: 1px solid var(--kaki);
-            padding: 10px;
+            padding: 8px;
             text-align: center;
+            font-size: 0.9em;
         }
-        th {
-            background-color: var(--kaki);
-            color: var(--blanc);
-        }
+        th { background-color: var(--kaki); color: var(--blanc); }
         footer {
             background-color: var(--kaki);
             color: var(--blanc);
             text-align: center;
             padding: 20px;
         }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+        input, select, textarea { width: 100%; padding: 8px; margin: 5px 0 15px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
         label { font-weight: 600; }
-        .btn {
-            display:inline-block;
-            padding:10px 20px;
-            background-color:var(--kaki);
-            color:var(--blanc);
-            border:none;
-            border-radius:8px;
-            cursor:pointer;
-            text-decoration:none;
-            font-weight:600;
-            margin-top:15px;
-        }
         iframe { width: 100%; border: 0; border-radius: 10px; height: 300px; }
+        /* Calendrier */
+        .calendar-container { margin-top: 20px; }
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; border: 1px solid var(--kaki); border-radius: 8px; background-color: var(--blanc); font-weight: 600; }
+        .tab-btn.active { background-color: var(--kaki); color: var(--blanc); }
+        .calendar { display: none; overflow-x: auto; }
+        .calendar.active { display: block; }
+        .calendar table { min-width: 800px; font-size: 0.8em; }
+        .newsletter input[type="email"] { margin-right: 10px; }
+        .newsletter button { margin-top: 0; }
     </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="logo.png" alt="Logo LEVEL'UP" style="height:80px; margin-bottom:10px;">
+    <img src="logo.png" alt="Logo LEVEL'UP">
     <h1>LEVEL'UP</h1>
-    <p>Un espace de formation pour grandir à chaque étape de la vie 📚✨</p>
+    <p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
     <nav>
-        <a href="#services">Services</a>
+        <a href="#services">Formations</a>
+        <a href="#planning">Planning</a>
         <a href="#tarifs">Tarifs</a>
         <a href="#reservation">Réservation</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- SERVICES -->
+<!-- ACCUEIL -->
+<section id="accueil">
+    <h2>Bienvenue chez LEVEL'UP 🎓</h2>
+    <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif. Des cours personnalisés, adaptés à vos horaires et à vos besoins, pour tous les âges et tous les niveaux.</p>
+    <a href="#reservation" class="btn">Réservez votre session</a>
+</section>
+
+<!-- FORMATIONS -->
 <section id="services">
-    <h2>Nos formations 💡</h2>
+    <h2>Nos Formations 💡</h2>
     <div class="services">
         <div class="card">
             <img src="grands-parents.png" alt="Informatique & Bureautique">
             <h3>Informatique & Bureautique 💻</h3>
+            <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
         </div>
         <div class="card">
             <img src="langues.png" alt="Langues">
             <h3>Langues vivantes 🌍</h3>
+            <p>Français et Anglais, cours adaptés à tous les niveaux.</p>
         </div>
         <div class="card">
             <img src="enfants.png" alt="Soutien scolaire">
             <h3>Soutien scolaire 📝</h3>
+            <p>Maths, Français, Histoire-Géo, aide aux devoirs avec suivi personnalisé.</p>
         </div>
         <div class="card">
             <img src="compta.png" alt="Comptabilité">
-            <h3>Comptabilité & Gestion 📊</h3>
+            <h3>Initiation Comptabilité & Gestion 📊</h3>
+            <p>Notions simples de gestion budgétaire et comptable pour la vie courante.</p>
         </div>
         <div class="card">
             <img src="admin.png" alt="Accompagnement administratif">
             <h3>Accompagnement administratif 🖋️</h3>
+            <p>Aide à la rédaction de CV, lettres de motivation et démarches administratives en ligne.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PLANNING -->
+<section id="planning">
+    <h2>Planning Prévisionnel 🗓️</h2>
+    <div class="calendar-container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showCalendar('mai')">Mai 2026</button>
+            <button class="tab-btn" onclick="showCalendar('juin')">Juin 2026</button>
+        </div>
+
+        <div id="mai" class="calendar active">
+            <h3>Salle 1 & Salle 2 - Mai 2026</h3>
+            <table>
+                <tr>
+                    <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
+                </tr>
+                <tr><td>15h30-17h</td><td>Maths - 1ère</td><td>SVT - Term</td><td>Français -1ère</td><td>Physique - Term</td><td>Administrative</td></tr>
+                <tr><td>17h-18h30</td><td>Maths - Term</td><td>SVT - 1ère</td><td>Philo - Term</td><td>Physique - 1ère</td><td>Administrative</td></tr>
+            </table>
+        </div>
+
+        <div id="juin" class="calendar">
+            <h3>Salle 1 & Salle 2 - Juin 2026</h3>
+            <table>
+                <tr>
+                    <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
+                </tr>
+                <tr><td>15h30-17h</td><td>Maths - 1ère</td><td>SVT - Term</td><td>Français -1ère</td><td>Physique - Term</td><td>Administrative</td></tr>
+                <tr><td>17h-18h30</td><td>Maths - Term</td><td>SVT - 1ère</td><td>Philo - Term</td><td>Physique - 1ère</td><td>Administrative</td></tr>
+            </table>
         </div>
     </div>
 </section>
@@ -144,30 +195,10 @@
 <section id="tarifs">
     <h2>Tarifs & Réservations 💰</h2>
     <table>
-        <tr>
-            <th>Type</th>
-            <th>Durée</th>
-            <th>Prix</th>
-            <th>Participants</th>
-        </tr>
-        <tr>
-            <td>Frais d'inscription</td>
-            <td>-</td>
-            <td>15€</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Cours traditionnels</td>
-            <td>38 semaines</td>
-            <td>19€/personne</td>
-            <td>5 par session</td>
-        </tr>
-        <tr>
-            <td>Stages intensifs</td>
-            <td>10h/semaine</td>
-            <td>99€/personne</td>
-            <td>5 par session</td>
-        </tr>
+        <tr><th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th></tr>
+        <tr><td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td></tr>
+        <tr><td>Cours traditionnels</td><td>38 semaines</td><td>19€/personne</td><td>5 par session</td></tr>
+        <tr><td>Stages intensifs</td><td>10h/semaine</td><td>99€/personne</td><td>5 par session</td></tr>
     </table>
 </section>
 
@@ -201,14 +232,23 @@
     </form>
 </section>
 
+<!-- NEWSLETTER -->
+<section id="newsletter">
+    <h2>Newsletter 📰</h2>
+    <div class="newsletter">
+        <input type="email" placeholder="Votre email" required>
+        <button class="btn">S'inscrire</button>
+    </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contactez-nous 📞</h2>
-    <div class="contact">
+    <h2>Contact 📞</h2>
+    <div class="contact-cards">
         <div class="card">
             <h3>Adresse 🏢</h3>
             <p>22 rue de la Défense Passive, 14000 Caen</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="card">
             <h3>Contact 📧</h3>
@@ -222,6 +262,15 @@
 <footer>
     <p>© 2025 LEVEL'UP. Tous droits réservés.</p>
 </footer>
+
+<script>
+    function showCalendar(month) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.calendar').forEach(cal => cal.classList.remove('active'));
+        document.getElementById(month).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
