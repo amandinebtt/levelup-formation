@@ -22,8 +22,6 @@
             padding: 20px;
             text-align: center;
         }
-        header h1 { margin: 0; font-size: 2.5em; }
-        header p { margin: 5px 0 15px; font-size: 1.2em; }
         nav a {
             color: var(--blanc);
             margin: 0 15px;
@@ -35,7 +33,7 @@
             max-width: 1000px;
             margin: auto;
         }
-        h2 { text-align: center; font-size: 2em; margin-bottom: 30px; }
+        h2 { text-align: center; margin-bottom: 30px; }
         .services, .tarifs, .contact {
             display: flex;
             flex-wrap: wrap;
@@ -57,18 +55,6 @@
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--kaki);
-            color: var(--blanc);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
         }
         table {
             width: 100%;
@@ -96,9 +82,20 @@
             margin: 5px 0 15px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            box-sizing: border-box;
         }
         label { font-weight: 600; }
+        .btn {
+            display:inline-block;
+            padding:10px 20px;
+            background-color:var(--kaki);
+            color:var(--blanc);
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            text-decoration:none;
+            font-weight:600;
+            margin-top:15px;
+        }
         iframe { width: 100%; border: 0; border-radius: 10px; height: 300px; }
     </style>
 </head>
@@ -116,43 +113,34 @@
     </nav>
 </header>
 
-<section id="accueil">
-    <h2>Bienvenue chez LEVEL'UP 🎓</h2>
-    <p>Votre centre de formation à Caen pour progresser en informatique, langues, bureautique, soutien scolaire et accompagnement administratif. Des cours personnalisés, adaptés à vos horaires et à vos besoins, pour tous les âges et tous les niveaux.</p>
-    <a href="#reservation" class="btn">Réservez votre session</a>
-</section>
-
+<!-- SERVICES -->
 <section id="services">
     <h2>Nos formations 💡</h2>
     <div class="services">
         <div class="card">
             <img src="grands-parents.png" alt="Informatique & Bureautique">
             <h3>Informatique & Bureautique 💻</h3>
-            <p>Initiation et perfectionnement Word, Excel, PowerPoint. Ateliers pratiques en petits groupes.</p>
         </div>
         <div class="card">
             <img src="langues.png" alt="Langues">
             <h3>Langues vivantes 🌍</h3>
-            <p>Français et Anglais, cours adaptés à tous les niveaux, pour progresser rapidement.</p>
         </div>
         <div class="card">
             <img src="enfants.png" alt="Soutien scolaire">
             <h3>Soutien scolaire 📝</h3>
-            <p>Maths, Français, Histoire-Géo, aide aux devoirs avec suivi personnalisé pour chaque élève.</p>
         </div>
         <div class="card">
             <img src="compta.png" alt="Comptabilité">
-            <h3>Initiation Comptabilité & Gestion 📊</h3>
-            <p>Notions simples de gestion budgétaire et comptable pour la vie courante.</p>
+            <h3>Comptabilité & Gestion 📊</h3>
         </div>
         <div class="card">
             <img src="admin.png" alt="Accompagnement administratif">
             <h3>Accompagnement administratif 🖋️</h3>
-            <p>Aide à la rédaction de CV, lettres de motivation et démarches administratives en ligne.</p>
         </div>
     </div>
 </section>
 
+<!-- TARIFS -->
 <section id="tarifs">
     <h2>Tarifs & Réservations 💰</h2>
     <table>
@@ -183,6 +171,7 @@
     </table>
 </section>
 
+<!-- RÉSERVATION -->
 <section id="reservation">
     <h2>Réservez votre session en ligne 🖊️</h2>
     <form action="mailto:contact@levelup-formation.fr" method="post" enctype="text/plain">
@@ -212,6 +201,7 @@
     </form>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contactez-nous 📞</h2>
     <div class="contact">
