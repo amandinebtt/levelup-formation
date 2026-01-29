@@ -9,133 +9,147 @@
 
 <style>
 :root{
---kaki:#566020;
---blanc:#f8f8f0;
---gris:#f2f2f2;
+  --kaki:#566020;
+  --blanc:#f8f8f0;
+  --gris:#f2f2f2;
 }
 
 body{
-margin:0;
-font-family:'Montserrat',sans-serif;
-background:var(--blanc);
-color:var(--kaki);
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--blanc);
+  color:var(--kaki);
 }
 
 header{
-background:var(--kaki);
-color:var(--blanc);
-text-align:center;
-padding:20px;
+  background:var(--kaki);
+  color:var(--blanc);
+  text-align:center;
+  padding:20px;
 }
 
 header img{
-height:80px;
-border-radius:50%;
-margin-bottom:10px;
+  height:80px;
+  border-radius:50%;
+  margin-bottom:10px;
 }
 
 nav a{
-color:var(--blanc);
-margin:0 12px;
-text-decoration:none;
-font-weight:600;
+  color:var(--blanc);
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  text-decoration: underline;
+  color:#f2f2f2;
 }
 
 section{
-padding:50px 20px;
-max-width:1100px;
-margin:auto;
+  padding:50px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
 h2{
-text-align:center;
-margin-bottom:30px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
 .services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
 }
 
 .card{
-background:var(--blanc);
-border:2px solid var(--kaki);
-border-radius:15px;
-padding:20px;
-width:300px;
-text-align:center;
-box-shadow:0 4px 6px rgba(0,0,0,0.1);
-position:relative;
+  background:var(--blanc);
+  border:2px solid var(--kaki);
+  border-radius:15px;
+  padding:20px;
+  width:300px;
+  text-align:center;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  position:relative;
 }
 
 .card img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:10px;
-margin-bottom:10px;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
 }
 
 .tooltip{
-display:none;
-position:absolute;
-top:10px;
-left:10px;
-right:10px;
-background:var(--blanc);
-border:2px solid var(--kaki);
-border-radius:10px;
-padding:15px;
-font-size:0.85em;
-z-index:10;
+  display:none;
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  background:var(--blanc);
+  border:2px solid var(--kaki);
+  border-radius:10px;
+  padding:15px;
+  font-size:0.85em;
+  z-index:10;
 }
 
 .card:hover .tooltip{
-display:block;
+  display:block;
 }
 
 table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+  overflow-x:auto;
+  display:block;
 }
 
 th,td{
-border:1px solid var(--kaki);
-padding:8px;
-text-align:center;
-font-size:0.9em;
+  border:1px solid var(--kaki);
+  padding:8px;
+  text-align:center;
+  font-size:0.9em;
 }
 
 th{
-background:var(--kaki);
-color:var(--blanc);
+  background:var(--kaki);
+  color:var(--blanc);
 }
 
 .btn{
-background:var(--kaki);
-color:var(--blanc);
-padding:10px 20px;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:600;
+  background:var(--kaki);
+  color:var(--blanc);
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+input[type="email"]{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  width:250px;
 }
 
 footer{
-background:var(--kaki);
-color:var(--blanc);
-text-align:center;
-padding:20px;
+  background:var(--kaki);
+  color:var(--blanc);
+  text-align:center;
+  padding:20px;
 }
 
 iframe{
-width:100%;
-height:300px;
-border:0;
-border-radius:10px;
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:10px;
 }
 </style>
 </head>
@@ -143,181 +157,189 @@ border-radius:10px;
 <body>
 
 <header>
-<img src="logo.png" alt="LEVEL'UP">
-<h1>LEVEL'UP</h1>
-<p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
-<nav>
-<a href="#services">Formations</a>
-<a href="#planning">Planning</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#contact">Contact</a>
-</nav>
+  <img src="logo.png" alt="LEVEL'UP">
+  <h1>LEVEL'UP</h1>
+  <p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
+  <nav>
+    <a href="#services">Formations</a>
+    <a href="#planning">Planning</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section id="accueil">
-<h2>Bienvenue chez LEVEL'UP</h2>
-<p>
-Centre de formation à Caen proposant des cours accessibles à tous : soutien scolaire,
-langues, bureautique, comptabilité et accompagnement administratif.
-Les cours sont organisés en petits groupes afin de garantir un suivi personnalisé.
-</p>
+  <h2>Bienvenue chez LEVEL'UP</h2>
+  <p>
+    Centre de formation à Caen proposant des cours accessibles à tous : soutien scolaire,
+    langues, bureautique, comptabilité et accompagnement administratif.
+    Les cours sont organisés en petits groupes afin de garantir un suivi personnalisé.
+  </p>
 </section>
 
 <section id="services">
-<h2>Nos formations</h2>
+  <h2>Nos formations</h2>
 
-<div class="services">
+  <div class="services">
 
-<div class="card">
-<img src="grands-parents.png">
-<h3>Informatique & Bureautique</h3>
-<div class="tooltip">
-Niveau débutant.  
-Word, Excel, PowerPoint, outils numériques du quotidien.  
-Objectif : gagner en autonomie.
-</div>
-</div>
+    <div class="card">
+      <img src="grands-parents.png" alt="Informatique & Bureautique">
+      <h3>Informatique & Bureautique</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Word, Excel, PowerPoint, outils numériques du quotidien.<br>
+        Objectif : gagner en autonomie.
+      </div>
+    </div>
 
-<div class="card">
-<img src="langues.png">
-<h3>Langues vivantes</h3>
-<div class="tooltip">
-Français & Anglais – niveaux A2 à B2.  
-Expression orale, compréhension, remise à niveau.
-</div>
-</div>
+    <div class="card">
+      <img src="langues.png" alt="Langues vivantes">
+      <h3>Langues vivantes</h3>
+      <div class="tooltip">
+        Français & Anglais – niveaux A2 à B2.<br>
+        Expression orale, compréhension, remise à niveau.
+      </div>
+    </div>
 
-<div class="card">
-<img src="enfants.png">
-<h3>Soutien scolaire</h3>
-<div class="tooltip">
-De la 3ème à la Terminale.  
-Maths, Français, SVT, Physique, SES, HGGSP.  
-Préparation examens et méthodologie.
-</div>
-</div>
+    <div class="card">
+      <img src="enfants.png" alt="Soutien scolaire">
+      <h3>Soutien scolaire</h3>
+      <div class="tooltip">
+        De la 3ème à la Terminale.<br>
+        Maths, Français, SVT, Physique, SES, HGGSP.<br>
+        Préparation examens et méthodologie.
+      </div>
+    </div>
 
-<div class="card">
-<img src="compta.png">
-<h3>Comptabilité & gestion</h3>
-<div class="tooltip">
-Niveau débutant.  
-Bases de la comptabilité, gestion du budget, compréhension des documents.
-</div>
-</div>
+    <div class="card">
+      <img src="compta.png" alt="Comptabilité & gestion">
+      <h3>Comptabilité & gestion</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Bases de la comptabilité, gestion du budget, compréhension des documents.
+      </div>
+    </div>
 
-<div class="card">
-<img src="admin.png">
-<h3>Accompagnement administratif</h3>
-<div class="tooltip">
-Niveau débutant.  
-CV, lettres, démarches en ligne, administrations.
-</div>
-</div>
+    <div class="card">
+      <img src="admin.png" alt="Accompagnement administratif">
+      <h3>Accompagnement administratif</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        CV, lettres, démarches en ligne, administrations.
+      </div>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <section id="planning">
-<h2>Planning prévisionnel</h2>
+  <h2>Planning prévisionnel</h2>
 
-<p style="text-align:center;">
-Les horaires du matin et de l’après-midi sont proposés.  
-Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
-</p>
+  <p style="text-align:center;">
+    Les horaires du matin et de l’après-midi sont proposés.<br>
+    Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
+  </p>
 
-<table>
-<tr>
-<th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
-</tr>
-<tr>
-<td>9h – 10h30</td>
-<td>Soutien scolaire</td>
-<td>Langues</td>
-<td>Informatique</td>
-<td>Comptabilité</td>
-<td>Administratif</td>
-</tr>
-<tr>
-<td>10h30 – 12h</td>
-<td>Soutien scolaire</td>
-<td>Langues</td>
-<td>Informatique</td>
-<td>Comptabilité</td>
-<td>Administratif</td>
-</tr>
-<tr>
-<td>15h30 – 17h</td>
-<td>Maths</td>
-<td>SVT</td>
-<td>Français</td>
-<td>Physique</td>
-<td>Administratif</td>
-</tr>
-<tr>
-<td>17h – 18h30</td>
-<td>Maths</td>
-<td>SVT</td>
-<td>Philo</td>
-<td>Physique</td>
-<td>Administratif</td>
-</tr>
-</table>
+  <table>
+    <tr>
+      <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
+    </tr>
+    <tr>
+      <td>9h – 10h30</td>
+      <td>Soutien scolaire</td>
+      <td>Langues</td>
+      <td>Informatique</td>
+      <td>Comptabilité</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>10h30 – 12h</td>
+      <td>Soutien scolaire</td>
+      <td>Langues</td>
+      <td>Informatique</td>
+      <td>Comptabilité</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>15h30 – 17h</td>
+      <td>Maths</td>
+      <td>SVT</td>
+      <td>Français</td>
+      <td>Physique</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>17h – 18h30</td>
+      <td>Maths</td>
+      <td>SVT</td>
+      <td>Philo</td>
+      <td>Physique</td>
+      <td>Administratif</td>
+    </tr>
+  </table>
 </section>
 
 <section id="tarifs">
-<h2>Tarifs & réservations</h2>
+  <h2>Tarifs & réservations</h2>
 
-<table>
-<tr>
-<th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
-</tr>
-<tr>
-<td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
-</tr>
-<tr>
-<td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
-</tr>
-<tr>
-<td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
-</tr>
-</table>
+  <table>
+    <tr>
+      <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
+    </tr>
+    <tr>
+      <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+    </tr>
+    <tr>
+      <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
+    </tr>
+    <tr>
+      <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
+    </tr>
+  </table>
 
-<p style="text-align:center;margin-top:15px;">
-Les frais d’inscription sont à régler une seule fois, lors du premier cours.
-</p>
+  <p style="text-align:center;margin-top:15px;">
+    Les frais d’inscription sont à régler une seule fois, lors du premier cours.
+  </p>
 </section>
 
 <section id="newsletter">
-<h2>Newsletter</h2>
-<div style="display:flex;justify-content:center;gap:10px;">
-<input type="email" placeholder="Votre email">
-<button class="btn">S'inscrire</button>
-</div>
+  <h2>Newsletter</h2>
+  <div style="display:flex;justify-content:center;gap:10px;">
+    <input type="email" placeholder="Votre email">
+    <button class="btn">S'inscrire</button>
+  </div>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
+  <h2>Contact</h2>
 
-<div class="services">
+  <div class="services">
 
-<div class="card">
-<h3>Adresse</h3>
-<p>22 rue de la Défense Passive<br>14000 Caen</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746"></iframe>
-</div>
+    <div class="card">
+      <h3>Adresse</h3>
+      <p>22 rue de la Défense Passive<br>14000 Caen</p>
+      <iframe
+        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen%2C%20France&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 
-<div class="card">
-<h3>Coordonnées</h3>
-<p>Email : contact@levelup-formation.fr</p>
-<p>Tél : 06 44 38 88 47</p>
-</div>
+    <div class="card">
+      <h3>Coordonnées</h3>
+      <p>Email : contact@levelup-formation.fr</p>
+      <p>Tél : 06 44 38 88 47</p>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <footer>
-<p>© 2025 LEVEL'UP – Tous droits réservés</p>
+  <p>© 2025 LEVEL'UP – Tous droits réservés</p>
 </footer>
 
 </body>
