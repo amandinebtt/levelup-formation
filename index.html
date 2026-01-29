@@ -99,7 +99,7 @@ h2{
   display:block;
 }
 
-/* TABLEAU RESPONSIVE SANS SCROLL */
+/* TABLEAU PLANNING RESPONSIVE */
 .table-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -125,7 +125,7 @@ h2{
 
 @media (max-width: 768px) {
   .table-wrapper {
-    grid-template-columns: repeat(3, 1fr); /* sur mobile, 3 colonnes */
+    grid-template-columns: repeat(3, 1fr); /* planning s'adapte sur mobile */
   }
   .table-wrapper .row {
     display: contents;
@@ -251,7 +251,6 @@ iframe{
     Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
   </p>
 
-  <!-- TABLEAU ADAPTE SANS SCROLL -->
   <div class="table-wrapper">
     <div class="header">Heure</div><div class="header">Lundi</div><div class="header">Mardi</div><div class="header">Mercredi</div><div class="header">Jeudi</div><div class="header">Vendredi</div>
 
@@ -265,12 +264,21 @@ iframe{
 <section id="tarifs">
   <h2>Tarifs & Réservations</h2>
 
-  <div class="table-wrapper">
-    <div class="header">Type</div><div class="header">Durée</div><div class="header">Prix</div><div class="header">Participants</div>
-
-    <div>Frais d'inscription</div><div>-</div><div>15€</div><div>-</div>
-    <div>Cours traditionnels</div><div>1h30</div><div>25€ / cours</div><div>8</div>
-    <div>Stages intensifs</div><div>1 semaine</div><div>150€</div><div>8</div>
+  <div style="overflow-x:auto;">
+    <table style="width:100%; table-layout:fixed;">
+      <tr>
+        <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
+      </tr>
+      <tr>
+        <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+      </tr>
+      <tr>
+        <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
+      </tr>
+      <tr>
+        <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
+      </tr>
+    </table>
   </div>
 
   <p style="text-align:center;margin-top:15px;">
