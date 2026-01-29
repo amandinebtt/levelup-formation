@@ -1,222 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEVEL'UP</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-    --kaki:#566020;
-    --blanc:#f8f8f0;
-    --gris:#f2f2f2;
-}
-
-body{
-    margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:var(--blanc);
-    color:var(--kaki);
-}
-
-header{
-    background:var(--kaki);
-    color:var(--blanc);
-    text-align:center;
-    padding:20px;
-}
-
-header img{
-    height:80px;
-    border-radius:50%;
-    margin-bottom:10px;
-}
-
-nav a{
-    color:var(--blanc);
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-section{
-    padding:50px 20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-h2{text-align:center;margin-bottom:30px;}
-
-.services{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.card{
-    background:var(--blanc);
-    border:2px solid var(--kaki);
-    border-radius:15px;
-    width:300px;
-    padding:20px;
-    text-align:center;
-    position:relative;
-}
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-.tooltip{
-    position:absolute;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    background:var(--kaki);
-    color:var(--blanc);
-    padding:15px;
-    border-radius:10px;
-    width:260px;
-    font-size:0.85em;
-    opacity:0;
-    pointer-events:none;
-    transition:0.3s;
-}
-
-.card:hover .tooltip{
-    opacity:1;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th,td{
-    border:1px solid var(--kaki);
-    padding:8px;
-    text-align:center;
-}
-
-th{
-    background:var(--kaki);
-    color:var(--blanc);
-}
-
-footer{
-    background:var(--kaki);
-    color:var(--blanc);
-    text-align:center;
-    padding:20px;
-}
-
-.btn{
-    background:var(--kaki);
-    color:var(--blanc);
-    padding:10px 20px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:600;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<img src="logo.png" alt="Logo">
-<h1>LEVEL'UP</h1>
-<p>Un espace de formation pour tous</p>
-<nav>
-<a href="#services">Formations</a>
-<a href="#planning">Planning</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<section id="services">
-<h2>Nos formations</h2>
-<div class="services">
-
-<div class="card">
-<img src="grands-parents.png">
-<h3>Informatique & bureautique</h3>
-<div class="tooltip">
-Niveau débutant<br><br>
-Word, Excel, mails, internet.<br>
-Pour adultes et seniors souhaitant devenir autonomes.
-</div>
-</div>
-
-<div class="card">
-<img src="langues.png">
-<h3>Langues vivantes</h3>
-<div class="tooltip">
-Niveaux A2 & B2<br><br>
-Anglais et français.<br>
-Expression orale, compréhension, confiance.
-</div>
-</div>
-
-<div class="card">
-<img src="enfants.png">
-<h3>Soutien scolaire</h3>
-<div class="tooltip">
-De la 3e à la Terminale<br><br>
-Maths, français, méthodologie et aide aux devoirs.
-</div>
-</div>
-
-<div class="card">
-<img src="compta.png">
-<h3>Comptabilité & gestion</h3>
-<div class="tooltip">
-Niveau débutant<br><br>
-Bases de gestion, budget, compréhension comptable.
-</div>
-</div>
-
-<div class="card">
-<img src="admin.png">
-<h3>Accompagnement administratif</h3>
-<div class="tooltip">
-Niveau débutant<br><br>
-CV, démarches en ligne, documents administratifs.
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="planning">
-<h2>Planning prévisionnel</h2>
-<p style="text-align:center;">
-⚠️ Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
-</p>
-
-<table>
-<tr>
-<th>Horaire</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
-</tr>
-<tr>
-<td>9h - 10h30</td>
-<td>Bureautique</td><td>Langues</td><td>Soutien</td><td>Admin</td><td>Bureautique</td>
-</tr>
-<tr>
-<td>15h30 - 17h</td>
-<td>Soutien</td><td>Langues</td><td>Bureautique</td><td>Compta</td><td>Admin</td>
-</tr>
-</table>
-</section>
-
+<!-- TARIFS -->
 <section id="tarifs">
 <h2>Tarifs & réservations</h2>
 
@@ -225,13 +7,22 @@ CV, démarches en ligne, documents administratifs.
 <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
 </tr>
 <tr>
-<td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+<td>Frais d'inscription</td>
+<td>-</td>
+<td>15€</td>
+<td>-</td>
 </tr>
 <tr>
-<td>Cours traditionnels</td><td>Année</td><td>25€</td><td>8 par session</td>
+<td>Cours traditionnels</td>
+<td>1h30</td>
+<td>25€ / cours</td>
+<td>8 par session</td>
 </tr>
 <tr>
-<td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8 par session</td>
+<td>Stages intensifs</td>
+<td>1 semaine</td>
+<td>150€</td>
+<td>8 par session</td>
 </tr>
 </table>
 
@@ -240,16 +31,42 @@ CV, démarches en ligne, documents administratifs.
 </p>
 </section>
 
+<!-- NEWSLETTER -->
+<section id="newsletter">
+<h2>Newsletter</h2>
+<div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
+<input type="email" placeholder="Votre adresse email" required
+style="padding:8px;border-radius:5px;border:1px solid #ccc;min-width:250px;">
+<button class="btn">S'inscrire</button>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p>22 rue de la Défense Passive – Caen</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+
+<div class="card">
+<h3>Adresse</h3>
+<p>22 rue de la Défense Passive<br>14000 Caen</p>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.0784580644586!2d-0.3680535244982381!3d49.199071176672746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a42b44f2d9f99%3A0x12381bcb22d83bbe!2s22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen!5e0!3m2!1sfr!2sfr!4v1764268226752!5m2!1sfr!2sfr"
+style="width:100%;height:250px;border:0;border-radius:10px;"
+loading="lazy"></iframe>
+</div>
+
+<div class="card">
+<h3>Contact</h3>
 <p>Email : contact@levelup-formation.fr</p>
+<p>Téléphone : 06 44 38 88 47</p>
 <p>LinkedIn : LEVEL'UP Formation</p>
+</div>
+
+</div>
 </section>
 
 <footer>
-© 2025 LEVEL'UP
+<p>© 2025 LEVEL'UP – Tous droits réservés</p>
 </footer>
-
-</body>
-</html>
