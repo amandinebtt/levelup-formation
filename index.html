@@ -102,23 +102,26 @@ h2{
 }
 
 table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
+  width: 90%;           /* Table plus large */
+  max-width: 1100px;    /* Limite pour grands écrans */
+  margin: 20px auto;    /* Centre la table horizontalement */
+  border-collapse: collapse;
+  font-size: 1em;       /* Texte plus lisible */
   overflow-x:auto;
   display:block;
 }
 
-th,td{
-  border:1px solid var(--kaki);
-  padding:8px;
-  text-align:center;
-  font-size:0.9em;
+th, td{
+  border: 1px solid var(--kaki);
+  padding: 12px;        /* Plus d’espace pour respirer */
+  text-align: center;
+  font-size: 1em;
 }
 
 th{
-  background:var(--kaki);
-  color:var(--blanc);
+  background: var(--kaki);
+  color: var(--blanc);
+  font-size: 1.05em;
 }
 
 .btn{
@@ -280,7 +283,7 @@ iframe{
 </section>
 
 <section id="tarifs">
-  <h2>Tarifs & réservations</h2>
+  <h2>Tarifs & Réservations</h2>
 
   <table>
     <tr>
