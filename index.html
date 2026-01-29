@@ -99,16 +99,18 @@ h2{
   display:block;
 }
 
-.fullwidth-table {
-  width: 100vw;
-  margin: 0;
-  overflow-x: auto;
+/* Tableau responsive */
+.table-container {
+  overflow-x:auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 table{
   width: 100%;
   border-collapse: collapse;
   font-size: 1em;
+  min-width:600px; /* pour que le tableau reste lisible */
 }
 
 th, td{
@@ -159,7 +161,7 @@ iframe{
 <body>
 
 <header>
-  <img src="https://via.placeholder.com/80x80?text=Logo" alt="LEVEL'UP">
+  <img src="logo.png" alt="LEVEL'UP">
   <h1>LEVEL'UP</h1>
   <p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
   <nav>
@@ -185,7 +187,7 @@ iframe{
   <div class="services">
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Informatique" alt="Informatique & Bureautique">
+      <img src="grands-parents.png" alt="Informatique & Bureautique">
       <h3>Informatique & Bureautique</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -195,7 +197,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Langues" alt="Langues vivantes">
+      <img src="langues.png" alt="Langues vivantes">
       <h3>Langues vivantes</h3>
       <div class="tooltip">
         Français & Anglais – niveaux A2 à B2.<br>
@@ -204,7 +206,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Soutien+Scolaire" alt="Soutien scolaire">
+      <img src="enfants.png" alt="Soutien scolaire">
       <h3>Soutien scolaire</h3>
       <div class="tooltip">
         De la 3ème à la Terminale.<br>
@@ -214,7 +216,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Comptabilite" alt="Comptabilité & gestion">
+      <img src="compta.png" alt="Comptabilité & gestion">
       <h3>Comptabilité & gestion</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -223,7 +225,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Administratif" alt="Accompagnement administratif">
+      <img src="admin.png" alt="Accompagnement administratif">
       <h3>Accompagnement administratif</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -242,7 +244,7 @@ iframe{
     Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
   </p>
 
-  <div class="fullwidth-table">
+  <div class="table-container">
     <table>
       <tr>
         <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
@@ -286,7 +288,7 @@ iframe{
 <section id="tarifs">
   <h2>Tarifs & Réservations</h2>
 
-  <div class="fullwidth-table">
+  <div class="table-container">
     <table>
       <tr>
         <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
@@ -325,7 +327,7 @@ iframe{
       <h3>Adresse</h3>
       <p>22 rue de la Défense Passive<br>14000 Caen</p>
       <iframe
-        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen%2C%20France&output=embed"
+        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen&output=embed"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
