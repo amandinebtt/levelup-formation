@@ -48,7 +48,8 @@ nav a:hover{
 
 section{
   padding:50px 20px;
-  max-width: none;  /* plus de limite de largeur */
+  max-width:1100px;
+  margin:auto;
 }
 
 h2{
@@ -100,22 +101,21 @@ h2{
   display:block;
 }
 
-.fullwidth-table {
-  width: 100vw;       /* prend toute la largeur de l’écran */
-  margin: 0;
-  overflow-x: auto;   /* scroll horizontal si besoin */
-}
-
 table{
-  width: 100%;
+  width: 90%;           /* Table plus large */
+  max-width: 1100px;    /* Limite pour grands écrans */
+  margin: 20px auto;    /* Centre la table horizontalement */
   border-collapse: collapse;
-  font-size: 1em;
+  font-size: 1em;       /* Texte plus lisible */
+  overflow-x:auto;
+  display:block;
 }
 
 th, td{
   border: 1px solid var(--kaki);
-  padding: 12px;
+  padding: 12px;        /* Plus d’espace pour respirer */
   text-align: center;
+  font-size: 1em;
 }
 
 th{
@@ -243,66 +243,62 @@ iframe{
     Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
   </p>
 
-  <div class="fullwidth-table">
-    <table>
-      <tr>
-        <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
-      </tr>
-      <tr>
-        <td>9h – 10h30</td>
-        <td>Soutien scolaire</td>
-        <td>Langues</td>
-        <td>Informatique</td>
-        <td>Comptabilité</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>10h30 – 12h</td>
-        <td>Soutien scolaire</td>
-        <td>Langues</td>
-        <td>Informatique</td>
-        <td>Comptabilité</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>15h30 – 17h</td>
-        <td>Maths</td>
-        <td>SVT</td>
-        <td>Français</td>
-        <td>Physique</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>17h – 18h30</td>
-        <td>Maths</td>
-        <td>SVT</td>
-        <td>Philo</td>
-        <td>Physique</td>
-        <td>Administratif</td>
-      </tr>
-    </table>
-  </div>
+  <table>
+    <tr>
+      <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
+    </tr>
+    <tr>
+      <td>9h – 10h30</td>
+      <td>Soutien scolaire</td>
+      <td>Langues</td>
+      <td>Informatique</td>
+      <td>Comptabilité</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>10h30 – 12h</td>
+      <td>Soutien scolaire</td>
+      <td>Langues</td>
+      <td>Informatique</td>
+      <td>Comptabilité</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>15h30 – 17h</td>
+      <td>Maths</td>
+      <td>SVT</td>
+      <td>Français</td>
+      <td>Physique</td>
+      <td>Administratif</td>
+    </tr>
+    <tr>
+      <td>17h – 18h30</td>
+      <td>Maths</td>
+      <td>SVT</td>
+      <td>Philo</td>
+      <td>Physique</td>
+      <td>Administratif</td>
+    </tr>
+  </table>
 </section>
 
 <section id="tarifs">
   <h2>Tarifs & Réservations</h2>
 
-  <div class="fullwidth-table">
-    <table>
-      <tr>
-        <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
-      </tr>
-      <tr>
-        <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
-      </tr>
-      <tr>
-        <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
-      </tr>
-      <tr>
-        <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
-      </tr>
-    </table>
-  </div>
+  <table>
+    <tr>
+      <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
+    </tr>
+    <tr>
+      <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+    </tr>
+    <tr>
+      <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
+    </tr>
+    <tr>
+      <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
+    </tr>
+  </table>
 
   <p style="text-align:center;margin-top:15px;">
     Les frais d’inscription sont à régler une seule fois, lors du premier cours.
