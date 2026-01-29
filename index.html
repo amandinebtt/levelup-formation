@@ -162,6 +162,24 @@ iframe{
   border:0;
   border-radius:10px;
 }
+
+/* TABLEAUX CLASSIQUES POUR TARIFS ET AUTRES */
+table {
+  width:100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid var(--kaki);
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: var(--kaki);
+  color: var(--blanc);
+}
 </style>
 </head>
 
@@ -264,19 +282,32 @@ iframe{
 <section id="tarifs">
   <h2>Tarifs & Réservations</h2>
 
-  <div style="overflow-x:auto;">
-    <table style="width:100%; table-layout:fixed;">
+  <!-- TABLEAU REMIS COMME ORIGINAL, MAIS TIENT DANS L'ÉCRAN -->
+  <div style="overflow-x:auto; width:100%;">
+    <table>
       <tr>
-        <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
+        <th>Type</th>
+        <th>Durée</th>
+        <th>Prix</th>
+        <th>Participants</th>
       </tr>
       <tr>
-        <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+        <td>Frais d'inscription</td>
+        <td>-</td>
+        <td>15€</td>
+        <td>-</td>
       </tr>
       <tr>
-        <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
+        <td>Cours traditionnels</td>
+        <td>1h30</td>
+        <td>25€ / cours</td>
+        <td>8</td>
       </tr>
       <tr>
-        <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
+        <td>Stages intensifs</td>
+        <td>1 semaine</td>
+        <td>150€</td>
+        <td>8</td>
       </tr>
     </table>
   </div>
