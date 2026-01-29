@@ -2,139 +2,162 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<title>Level Up Formation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LEVEL'UP - Formation & Accompagnement</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --kaki:#566020;
-    --blanc:#f8f8f0;
-}
-
 body{
     margin:0;
-    font-family:'Montserrat',sans-serif;
-    background:var(--blanc);
-    color:var(--kaki);
+    font-family:Arial, sans-serif;
+    background:#f5f6fa;
+    color:#333;
 }
 
 header{
-    background:var(--kaki);
-    color:var(--blanc);
-    text-align:center;
-    padding:25px;
+    background:#4b2aad;
+    color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
 header img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:10px;
+    height:60px;
+}
+
+nav{
+    background:#372080;
+    padding:10px;
+    text-align:center;
 }
 
 nav a{
-    color:var(--blanc);
-    margin:0 12px;
+    color:white;
+    margin:0 15px;
     text-decoration:none;
-    font-weight:600;
+    font-weight:bold;
 }
 
 section{
-    padding:50px 20px;
-    max-width:1100px;
-    margin:auto;
+    padding:50px 8%;
 }
 
-h2{text-align:center;margin-bottom:30px}
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#4b2aad;
+}
 
-.services{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+/* FORMATIONS */
+.formations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
 }
 
 .card{
-    border:2px solid var(--kaki);
-    border-radius:15px;
+    background:white;
     padding:20px;
-    width:300px;
+    border-radius:15px;
     text-align:center;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:10px;
+    width:80px;
+    margin-bottom:15px;
 }
 
-.btn{
-    background:var(--kaki);
-    color:var(--blanc);
-    padding:10px 20px;
-    border-radius:8px;
-    text-decoration:none;
+/* POST IT */
+.popup{
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:#fff7b0;
+    padding:30px;
+    border-radius:15px;
+    width:90%;
+    max-width:400px;
+    position:relative;
+}
+
+.popup-content h3{
+    margin-top:0;
+}
+
+.close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* TARIFS */
+.tarifs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.tarif-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* PLANNING */
+.planning{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.planning ul{
+    list-style:none;
+    padding:0;
+}
+
+.planning li{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
+
+/* FOOTER */
+footer{
+    background:#2d1a66;
+    color:white;
+    padding:40px 8%;
+}
+
+footer input{
+    padding:10px;
+    width:200px;
+}
+
+footer button{
+    padding:10px;
+    background:#ffcc00;
     border:none;
     cursor:pointer;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-    font-size:0.9em;
-}
-
-th,td{
-    border:1px solid var(--kaki);
-    padding:8px;
-    text-align:center;
-}
-
-th{
-    background:var(--kaki);
-    color:var(--blanc);
-}
-
-.note{
-    margin-top:10px;
-    font-size:0.9em;
-    font-style:italic;
-}
-
-.tabs{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:20px;
-}
-
-.tab-btn{
-    padding:10px 20px;
-    border:1px solid var(--kaki);
-    background:var(--blanc);
-    cursor:pointer;
-    border-radius:8px;
-    font-weight:600;
-}
-
-.tab-btn.active{
-    background:var(--kaki);
-    color:var(--blanc);
-}
-
-.calendar{display:none}
-.calendar.active{display:block}
-
-footer{
-    background:var(--kaki);
-    color:var(--blanc);
-    text-align:center;
-    padding:20px;
 }
 </style>
 </head>
@@ -142,79 +165,133 @@ footer{
 <body>
 
 <header>
-<img src="logo.png" alt="Logo LEVEL'UP">
-<h1>LEVEL'UP</h1>
-<p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
-<nav>
-<a href="#services">Formations</a>
-<a href="#planning">Planning</a>
-<a href="#tarifs">Tarifs</a>
-<a href="#reservation">Réservation</a>
-<a href="#contact">Contact</a>
-</nav>
+<img src="logo.png">
+<h1>Level Up Formation</h1>
 </header>
 
-<section id="services">
-<h2>Nos formations 💡</h2>
-<div class="services">
-<div class="card"><img src="grands-parents.png"><h3>Informatique & Bureautique 💻</h3></div>
-<div class="card"><img src="langues.png"><h3>Langues vivantes 🌍</h3></div>
-<div class="card"><img src="enfants.png"><h3>Soutien scolaire 📝</h3></div>
-<div class="card"><img src="compta.png"><h3>Comptabilité & Gestion 📊</h3></div>
-<div class="card"><img src="admin.png"><h3>Accompagnement administratif 🖋️</h3></div>
+<nav>
+<a href="#formations">Formations</a>
+<a href="#planning">Planning</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="formations">
+<h2>Nos formations</h2>
+
+<div class="formations">
+<div class="card" onclick="openPopup('admin')">
+<img src="admin.png">
+<h3>Bureautique & Administratif</h3>
+</div>
+
+<div class="card" onclick="openPopup('compta')">
+<img src="compta.png">
+<h3>Comptabilité</h3>
+</div>
+
+<div class="card" onclick="openPopup('enfants')">
+<img src="enfants.png">
+<h3>Soutien scolaire</h3>
+</div>
+
+<div class="card" onclick="openPopup('langues')">
+<img src="langues.png">
+<h3>Langues vivantes</h3>
+</div>
+
+<div class="card" onclick="openPopup('grands')">
+<img src="grands-parents.png">
+<h3>Informatique seniors</h3>
+</div>
 </div>
 </section>
 
 <section id="planning">
-<h2>Planning prévisionnel 🗓️</h2>
+<h2>Planning type (hors vacances)</h2>
 
-<div class="tabs">
-<button class="tab-btn active" onclick="showCalendar('mai',this)">Mai 2026</button>
-<button class="tab-btn" onclick="showCalendar('juin',this)">Juin 2026</button>
-</div>
+<div class="planning">
+<ul>
+<li>🕘 9h – 10h30 : Cours individuels / accompagnement administratif</li>
+<li>🕥 10h30 – 12h : Bureautique & comptabilité débutant</li>
+<li>🕒 15h30 – 17h : Soutien scolaire (3ème → Terminale)</li>
+<li>🕔 17h – 18h30 : Langues vivantes (A2 / B2)</li>
+</ul>
 
-<div id="mai" class="calendar active">
-<table>
-<tr><th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th></tr>
-<tr><td>9h-10h30</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10h30-12h</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15h30-17h</td><td>Maths</td><td>SVT</td><td>Français</td><td>Physique</td><td>Administrative</td></tr>
-<tr><td>17h-18h30</td><td>Maths</td><td>SVT</td><td>Philo</td><td>Physique</td><td>Administrative</td></tr>
-</table>
-</div>
-
-<div id="juin" class="calendar">
-<table>
-<tr><th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th></tr>
-<tr><td>9h-10h30</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>10h30-12h</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>15h30-17h</td><td>Maths</td><td>SVT</td><td>Français</td><td>Physique</td><td>Administrative</td></tr>
-<tr><td>17h-18h30</td><td>Maths</td><td>SVT</td><td>Philo</td><td>Physique</td><td>Administrative</td></tr>
-</table>
+<p><strong>⚠️ Pendant les vacances scolaires :</strong><br>
+Le planning est modifié : les cours sont remplacés par des <strong>stages intensifs d’une semaine</strong>.</p>
 </div>
 </section>
 
 <section id="tarifs">
-<h2>Tarifs & Réservations 💰</h2>
-<table>
-<tr><th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th></tr>
-<tr><td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td></tr>
-<tr><td>Cours traditionnels</td><td>38 semaines</td><td>20€</td><td>8 par session</td></tr>
-<tr><td>Stages intensifs</td><td>10h/semaine</td><td>99€</td><td>8 par session</td></tr>
-</table>
-<p class="note">Les frais d’inscription sont à régler une seule fois, lors du premier cours.</p>
+<h2>Tarifs</h2>
+
+<div class="tarifs">
+<div class="tarif-card" onclick="openPopup('cours')">
+<h3>Cours traditionnels</h3>
+<p>25 € / séance</p>
+</div>
+
+<div class="tarif-card" onclick="openPopup('stage')">
+<h3>Stages intensifs</h3>
+<p>150 € / semaine</p>
+</div>
+
+<div class="tarif-card">
+<h3>Frais d’inscription</h3>
+<p>15 € (une seule fois)</p>
+</div>
+</div>
 </section>
 
-<footer>
-<p>© 2025 LEVEL'UP</p>
+<footer id="contact">
+<h3>Contact & infos</h3>
+<p>📍 Localisation : à compléter</p>
+<p>📧 Email : contact@levelup-formation.fr</p>
+
+<h4>Newsletter</h4>
+<input type="email" placeholder="Votre email">
+<button>S’inscrire</button>
 </footer>
 
+<!-- POPUPS -->
+<div class="popup" id="popup">
+<div class="popup-content">
+<span class="close" onclick="closePopup()">✖</span>
+<div id="popup-text"></div>
+</div>
+</div>
+
 <script>
-function showCalendar(id,btn){
-document.querySelectorAll('.calendar').forEach(c=>c.classList.remove('active'));
-document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-btn.classList.add('active');
+function openPopup(type){
+let text="";
+if(type==="admin"){
+text="<h3>Bureautique & administratif</h3><p>Niveau débutant. Apprentissage de Word, Excel, mails, démarches administratives, organisation numérique.</p>";
+}
+if(type==="compta"){
+text="<h3>Comptabilité</h3><p>Niveau débutant. Bases comptables, compréhension des documents, accompagnement pédagogique.</p>";
+}
+if(type==="enfants"){
+text="<h3>Soutien scolaire</h3><p>De la 3ème à la Terminale. Maths, SVT, Français, SES, HGGSP.</p>";
+}
+if(type==="langues"){
+text="<h3>Langues vivantes</h3><p>Niveaux A2 et B2. Expression orale, écrite, compréhension.</p>";
+}
+if(type==="grands"){
+text="<h3>Informatique seniors</h3><p>Utilisation de l’ordinateur, internet, démarches en ligne, sécurité.</p>";
+}
+if(type==="cours"){
+text="<h3>Cours traditionnels – 25 €</h3><p>Cours hebdomadaires, petits groupes (8 max), progression continue.</p>";
+}
+if(type==="stage"){
+text="<h3>Stages intensifs – 150 €</h3><p>1 semaine pendant les vacances scolaires, rythme intensif, objectifs ciblés.</p>";
+}
+document.getElementById("popup-text").innerHTML=text;
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
 }
 </script>
 
