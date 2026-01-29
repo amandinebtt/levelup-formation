@@ -124,4 +124,226 @@ th{
 }
 
 .btn{
-  background:var(-
+  background:var(--kaki);
+  color:var(--blanc);
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+input[type="email"]{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  width:250px;
+}
+
+footer{
+  background:var(--kaki);
+  color:var(--blanc);
+  text-align:center;
+  padding:20px;
+}
+
+iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="https://via.placeholder.com/80" alt="LEVEL'UP">
+  <h1>LEVEL'UP</h1>
+  <p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
+  <nav>
+    <a href="#services">Formations</a>
+    <a href="#planning">Planning</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="accueil">
+  <h2>Bienvenue chez LEVEL'UP</h2>
+  <p>
+    Centre de formation à Caen proposant des cours accessibles à tous : soutien scolaire,
+    langues, bureautique, comptabilité et accompagnement administratif.
+    Les cours sont organisés en petits groupes afin de garantir un suivi personnalisé.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Nos formations</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Informatique" alt="Informatique & Bureautique">
+      <h3>Informatique & Bureautique</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Word, Excel, PowerPoint, outils numériques du quotidien.<br>
+        Objectif : gagner en autonomie.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Langues" alt="Langues vivantes">
+      <h3>Langues vivantes</h3>
+      <div class="tooltip">
+        Français & Anglais – niveaux A2 à B2.<br>
+        Expression orale, compréhension, remise à niveau.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Soutien+Scolaire" alt="Soutien scolaire">
+      <h3>Soutien scolaire</h3>
+      <div class="tooltip">
+        De la 3ème à la Terminale.<br>
+        Maths, Français, SVT, Physique, SES, HGGSP.<br>
+        Préparation examens et méthodologie.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Comptabilite" alt="Comptabilité & gestion">
+      <h3>Comptabilité & gestion</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Bases de la comptabilité, gestion du budget, compréhension des documents.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200?text=Administratif" alt="Accompagnement administratif">
+      <h3>Accompagnement administratif</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        CV, lettres, démarches en ligne, administrations.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="planning">
+  <h2>Planning prévisionnel</h2>
+
+  <p style="text-align:center;">
+    Les horaires du matin et de l’après-midi sont proposés.<br>
+    Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
+  </p>
+
+  <div class="fullwidth-table">
+    <table>
+      <tr>
+        <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
+      </tr>
+      <tr>
+        <td>9h – 10h30</td>
+        <td>Soutien scolaire</td>
+        <td>Langues</td>
+        <td>Informatique</td>
+        <td>Comptabilité</td>
+        <td>Administratif</td>
+      </tr>
+      <tr>
+        <td>10h30 – 12h</td>
+        <td>Soutien scolaire</td>
+        <td>Langues</td>
+        <td>Informatique</td>
+        <td>Comptabilité</td>
+        <td>Administratif</td>
+      </tr>
+      <tr>
+        <td>15h30 – 17h</td>
+        <td>Maths</td>
+        <td>SVT</td>
+        <td>Français</td>
+        <td>Physique</td>
+        <td>Administratif</td>
+      </tr>
+      <tr>
+        <td>17h – 18h30</td>
+        <td>Maths</td>
+        <td>SVT</td>
+        <td>Philo</td>
+        <td>Physique</td>
+        <td>Administratif</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section id="tarifs">
+  <h2>Tarifs & Réservations</h2>
+
+  <div class="fullwidth-table">
+    <table>
+      <tr>
+        <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
+      </tr>
+      <tr>
+        <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
+      </tr>
+      <tr>
+        <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
+      </tr>
+      <tr>
+        <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="text-align:center;margin-top:15px;">
+    Les frais d’inscription sont à régler une seule fois, lors du premier cours.
+  </p>
+</section>
+
+<section id="newsletter">
+  <h2>Newsletter</h2>
+  <div style="display:flex;justify-content:center;gap:10px;">
+    <input type="email" placeholder="Votre email">
+    <button class="btn">S'inscrire</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Adresse</h3>
+      <p>22 rue de la Défense Passive<br>14000 Caen</p>
+      <iframe
+        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen%2C%20France&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <h3>Coordonnées</h3>
+      <p>Email : contact@levelup-formation.fr</p>
+      <p>Tél : 06 44 38 88 47</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 LEVEL'UP – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
