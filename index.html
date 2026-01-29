@@ -99,30 +99,37 @@ h2{
   display:block;
 }
 
-/* Tableau responsive */
-.table-container {
-  overflow-x:auto;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
+/* TABLEAU RESPONSIVE SANS SCROLL */
+.table-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--kaki);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-table{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1em;
-  min-width:400px; /* tableau s'adapte mieux aux petits écrans */
-}
-
-th, td{
-  border: 1px solid var(--kaki);
+.table-wrapper div {
+  background: var(--blanc);
   padding: 12px;
   text-align: center;
+  word-wrap: break-word;
+  font-size: 0.9em;
 }
 
-th{
+.table-wrapper .header {
   background: var(--kaki);
   color: var(--blanc);
-  font-size: 1.05em;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* sur mobile, 3 colonnes */
+  }
+  .table-wrapper .row {
+    display: contents;
+  }
 }
 
 .btn{
@@ -161,7 +168,7 @@ iframe{
 <body>
 
 <header>
-  <img src="https://via.placeholder.com/80x80?text=Logo" alt="LEVEL'UP" id="logo.png">
+  <img src="logo.png" alt="LEVEL'UP">
   <h1>LEVEL'UP</h1>
   <p>✨ Un espace de formation pour grandir à chaque étape de la vie 📚</p>
   <nav>
@@ -187,7 +194,7 @@ iframe{
   <div class="services">
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=grands-parents.png" alt="Informatique & Bureautique">
+      <img src="grands-parents.png" alt="Informatique & Bureautique">
       <h3>Informatique & Bureautique</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -197,7 +204,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=langues.png" alt="Langues vivantes">
+      <img src="langues.png" alt="Langues vivantes">
       <h3>Langues vivantes</h3>
       <div class="tooltip">
         Français & Anglais – niveaux A2 à B2.<br>
@@ -206,7 +213,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=enfants.png" alt="Soutien scolaire">
+      <img src="enfants.png" alt="Soutien scolaire">
       <h3>Soutien scolaire</h3>
       <div class="tooltip">
         De la 3ème à la Terminale.<br>
@@ -216,7 +223,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=compta.png" alt="Comptabilité & gestion">
+      <img src="compta.png" alt="Comptabilité & gestion">
       <h3>Comptabilité & gestion</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -225,7 +232,7 @@ iframe{
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=admin.png" alt="Accompagnement administratif">
+      <img src="admin.png" alt="Accompagnement administratif">
       <h3>Accompagnement administratif</h3>
       <div class="tooltip">
         Niveau débutant.<br>
@@ -244,65 +251,26 @@ iframe{
     Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
   </p>
 
-  <div class="table-container">
-    <table>
-      <tr>
-        <th>Heure</th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th>
-      </tr>
-      <tr>
-        <td>9h – 10h30</td>
-        <td>Soutien scolaire</td>
-        <td>Langues</td>
-        <td>Informatique</td>
-        <td>Comptabilité</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>10h30 – 12h</td>
-        <td>Soutien scolaire</td>
-        <td>Langues</td>
-        <td>Informatique</td>
-        <td>Comptabilité</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>15h30 – 17h</td>
-        <td>Maths</td>
-        <td>SVT</td>
-        <td>Français</td>
-        <td>Physique</td>
-        <td>Administratif</td>
-      </tr>
-      <tr>
-        <td>17h – 18h30</td>
-        <td>Maths</td>
-        <td>SVT</td>
-        <td>Philo</td>
-        <td>Physique</td>
-        <td>Administratif</td>
-      </tr>
-    </table>
+  <!-- TABLEAU ADAPTE SANS SCROLL -->
+  <div class="table-wrapper">
+    <div class="header">Heure</div><div class="header">Lundi</div><div class="header">Mardi</div><div class="header">Mercredi</div><div class="header">Jeudi</div><div class="header">Vendredi</div>
+
+    <div>9h – 10h30</div><div>Soutien scolaire</div><div>Langues</div><div>Informatique</div><div>Comptabilité</div><div>Administratif</div>
+    <div>10h30 – 12h</div><div>Soutien scolaire</div><div>Langues</div><div>Informatique</div><div>Comptabilité</div><div>Administratif</div>
+    <div>15h30 – 17h</div><div>Maths</div><div>SVT</div><div>Français</div><div>Physique</div><div>Administratif</div>
+    <div>17h – 18h30</div><div>Maths</div><div>SVT</div><div>Philo</div><div>Physique</div><div>Administratif</div>
   </div>
 </section>
 
 <section id="tarifs">
   <h2>Tarifs & Réservations</h2>
 
-  <div class="table-container">
-    <table>
-      <tr>
-        <th>Type</th><th>Durée</th><th>Prix</th><th>Participants</th>
-      </tr>
-      <tr>
-        <td>Frais d'inscription</td><td>-</td><td>15€</td><td>-</td>
-      </tr>
-      <tr>
-        <td>Cours traditionnels</td><td>1h30</td><td>25€ / cours</td><td>8</td>
-      </tr>
-      <tr>
-        <td>Stages intensifs</td><td>1 semaine</td><td>150€</td><td>8</td>
-      </tr>
-    </table>
+  <div class="table-wrapper">
+    <div class="header">Type</div><div class="header">Durée</div><div class="header">Prix</div><div class="header">Participants</div>
+
+    <div>Frais d'inscription</div><div>-</div><div>15€</div><div>-</div>
+    <div>Cours traditionnels</div><div>1h30</div><div>25€ / cours</div><div>8</div>
+    <div>Stages intensifs</div><div>1 semaine</div><div>150€</div><div>8</div>
   </div>
 
   <p style="text-align:center;margin-top:15px;">
@@ -327,7 +295,7 @@ iframe{
       <h3>Adresse</h3>
       <p>22 rue de la Défense Passive<br>14000 Caen</p>
       <iframe
-        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20D%C3%A9fense%20Passive%2C%2014000%20Caen&output=embed"
+        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20Défense%20Passive%2C%2014000%20Caen&output=embed"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
