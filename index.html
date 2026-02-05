@@ -19,7 +19,6 @@ body{
   font-family:'Montserrat',sans-serif;
   background:var(--blanc);
   color:var(--kaki);
-  line-height: 1.6;
 }
 
 header{
@@ -49,8 +48,6 @@ nav a:hover{
 
 section{
   padding:50px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 h2{
@@ -102,14 +99,14 @@ h2{
   display:block;
 }
 
-/* --- STYLES TABLEAUX COMMUNS --- */
+/* TABLEAU PLANNING RESPONSIVE */
 .table-wrapper {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1px;
   background: var(--kaki);
   border-radius: 5px;
   overflow: hidden;
-  border: 1px solid var(--kaki);
 }
 
 .table-wrapper div {
@@ -118,9 +115,6 @@ h2{
   text-align: center;
   word-wrap: break-word;
   font-size: 0.9em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .table-wrapper .header {
@@ -129,19 +123,13 @@ h2{
   font-weight: 600;
 }
 
-/* --- GRILLE SPECIFIQUE PLANNING (6 colonnes) --- */
-.grid-planning {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-/* --- GRILLE SPECIFIQUE TARIFS (4 colonnes - PHOTO 1) --- */
-.grid-tarifs {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 @media (max-width: 768px) {
-  .grid-planning { grid-template-columns: repeat(3, 1fr); }
-  .grid-tarifs { grid-template-columns: repeat(2, 1fr); }
+  .table-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* planning s'adapte sur mobile */
+  }
+  .table-wrapper .row {
+    display: contents;
+  }
 }
 
 .btn{
@@ -166,7 +154,6 @@ footer{
   color:var(--blanc);
   text-align:center;
   padding:20px;
-  margin-top: 40px;
 }
 
 iframe{
@@ -174,6 +161,24 @@ iframe{
   height:300px;
   border:0;
   border-radius:10px;
+}
+
+/* TABLEAUX CLASSIQUES POUR TARIFS ET AUTRES */
+table {
+  width:100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid var(--kaki);
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: var(--kaki);
+  color: var(--blanc);
 }
 </style>
 </head>
@@ -194,7 +199,7 @@ iframe{
 
 <section id="accueil">
   <h2>Bienvenue chez LEVEL'UP</h2>
-  <p style="text-align: center;">
+  <p>
     Centre de formation à Caen proposant des cours accessibles à tous : soutien scolaire,
     langues, bureautique, comptabilité et accompagnement administratif.
     Les cours sont organisés en petits groupes afin de garantir un suivi personnalisé.
@@ -203,13 +208,151 @@ iframe{
 
 <section id="services">
   <h2>Nos formations</h2>
+
   <div class="services">
+
     <div class="card">
-      <img src="grands-parents.png" alt="Informatique">
+      <img src="grands-parents.png" alt="Informatique & Bureautique">
       <h3>Informatique & Bureautique</h3>
-      <div class="tooltip">Niveau débutant. Word, Excel, PowerPoint. Objectif : autonomie.</div>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Word, Excel, PowerPoint, outils numériques du quotidien.<br>
+        Objectif : gagner en autonomie.
+      </div>
     </div>
+
     <div class="card">
-      <img src="langues.png" alt="Langues">
+      <img src="langues.png" alt="Langues vivantes">
       <h3>Langues vivantes</h3>
-      <div class="tooltip">Français & Anglais (A2 à B2). Expression orale et remise à niveau.</div>
+      <div class="tooltip">
+        Français & Anglais – niveaux A2 à B2.<br>
+        Expression orale, compréhension, remise à niveau.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="enfants.png" alt="Soutien scolaire">
+      <h3>Soutien scolaire</h3>
+      <div class="tooltip">
+        De la 3ème à la Terminale.<br>
+        Maths, Français, SVT, Physique, SES, HGGSP.<br>
+        Préparation examens et méthodologie.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="compta.png" alt="Comptabilité & gestion">
+      <h3>Comptabilité & gestion</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        Bases de la comptabilité, gestion du budget, compréhension des documents.
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="admin.png" alt="Accompagnement administratif">
+      <h3>Accompagnement administratif</h3>
+      <div class="tooltip">
+        Niveau débutant.<br>
+        CV, lettres, démarches en ligne, administrations.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="planning">
+  <h2>Planning prévisionnel</h2>
+
+  <p style="text-align:center;">
+    Les horaires du matin et de l’après-midi sont proposés.<br>
+    Pendant les vacances scolaires, le planning change : stages intensifs d’une semaine.
+  </p>
+
+  <div class="table-wrapper">
+    <div class="header">Heure</div><div class="header">Lundi</div><div class="header">Mardi</div><div class="header">Mercredi</div><div class="header">Jeudi</div><div class="header">Vendredi</div>
+
+    <div>9h – 10h30</div><div>Soutien scolaire</div><div>Langues</div><div>Informatique</div><div>Comptabilité</div><div>Administratif</div>
+    <div>10h30 – 12h</div><div>Soutien scolaire</div><div>Langues</div><div>Informatique</div><div>Comptabilité</div><div>Administratif</div>
+    <div>15h30 – 17h</div><div>Maths</div><div>SVT</div><div>Français</div><div>Physique</div><div>Administratif</div>
+    <div>17h – 18h30</div><div>Maths</div><div>SVT</div><div>Philo</div><div>Physique</div><div>Administratif</div>
+  </div>
+</section>
+
+<section id="tarifs">
+  <h2>Tarifs & Réservations</h2>
+
+  <!-- TABLEAU REMIS COMME ORIGINAL, MAIS TIENT DANS L'ÉCRAN -->
+  <div style="overflow-x:auto; width:100%;">
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Durée</th>
+        <th>Prix</th>
+        <th>Participants</th>
+      </tr>
+      <tr>
+        <td>Frais d'inscription</td>
+        <td>-</td>
+        <td>15€</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>Cours traditionnels</td>
+        <td>1h30</td>
+        <td>25€ / cours</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Stages intensifs</td>
+        <td>1 semaine</td>
+        <td>150€</td>
+        <td>8</td>
+      </tr>
+    </table>
+  </div>
+
+  <p style="text-align:center;margin-top:15px;">
+    Les frais d’inscription sont à régler une seule fois, lors du premier cours.
+  </p>
+</section>
+
+<section id="newsletter">
+  <h2>Newsletter</h2>
+  <div style="display:flex;justify-content:center;gap:10px;">
+    <input type="email" placeholder="Votre email">
+    <button class="btn">S'inscrire</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Adresse</h3>
+      <p>22 rue de la Défense Passive<br>14000 Caen</p>
+      <iframe
+        src="https://maps.google.com/maps?q=22%20Rue%20de%20la%20Défense%20Passive%2C%2014000%20Caen&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <h3>Coordonnées</h3>
+      <p>Email : contact@levelup-formation.fr</p>
+      <p>Tél : 06 44 38 88 47</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 LEVEL'UP – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
